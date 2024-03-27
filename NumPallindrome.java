@@ -1,12 +1,19 @@
 public class NumPallindrome {
-    public static boolean check(int n, int temp){
-        if(n == 0){
-            return true;
+    public static int check(int n, int temp) {
+        if (n == 0) {
+            return temp;
         }
-        temp = temp * 10 + r;
-        
+        temp = temp * 10 + (n % 10);
+        return check(n / 10, temp);
+
     }
+
     public static void main(String[] args) {
-         boolean t = check(121,0);
+        int n = 121;
+         int t = check(n,0);
+         if(t == n)
+         System.out.println("yes");
+         else
+         System.out.println("N0");
     }
 }
