@@ -8,6 +8,7 @@ public class SubSeq {
     public static void sub(String str, String ans) {
         if (str.isEmpty()) {
             System.out.println(ans);
+            return;
 
         }
         sub(str.substring(1), ans);
